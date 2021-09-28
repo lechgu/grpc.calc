@@ -1,0 +1,24 @@
+﻿@model WebApp.Models.Calculation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <span>X:</span> @Html.TextBoxFor(m => m.X)<br /><br />
+        <span>Y: </span> @Html.TextBoxFor(m => m.Y)<br /><br />
+
+        <input id="Submit" type="submit" value="Add Numbers" /><br /><br />
+        <span>Result: </span>@Html.DisplayFor(m => m.Result)<br /><br />
+    }
+
+    <hr />
+
+</body>
+</html>
