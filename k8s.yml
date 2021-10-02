@@ -49,6 +49,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
+    preferredChain: "ISRG Root X1"
     email: lgudalewicz@demanddriventech.com
     privateKeySecretRef:
       name: letsencrypt-prod
