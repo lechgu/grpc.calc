@@ -1,4 +1,4 @@
-# IntuiFlow.Grid.Calculator
+# IntuiFlow.Calculator
 
 This is typical gRPC service and its clients implementation.
 
