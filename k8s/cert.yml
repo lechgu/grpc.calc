@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: calculator
+  namespace: calculator
+spec:
+  dnsNames:
+    - calc2.grid.demanddriventech.com
+  secretName: calculator-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
