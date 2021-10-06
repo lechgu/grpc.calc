@@ -4,7 +4,7 @@ import calculator_pb2_grpc
 
 
 channel = grpc.secure_channel(
-    "calc2.grid.demanddriventech.com:443", grpc.ssl_channel_credentials()
+    "calculator.grid.demanddriventech.com:443", grpc.ssl_channel_credentials()
 )
 
 req = calculator_pb2.CalculateRequest(x=17, y=25, op="+")
