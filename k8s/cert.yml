@@ -5,7 +5,11 @@ metadata:
   namespace: calculator
 spec:
   dnsNames:
+<<<<<<< HEAD
     - calculator.grid.demanddriventech.com
+=======
+    - calc2.grid.demanddriventech.com
+>>>>>>> dfc24d9f1c3e7cb86754c199e2124652a42b5a13
   secretName: calculator-tls
   issuerRef:
     name: letsencrypt
