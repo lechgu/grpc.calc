@@ -53,8 +53,7 @@ spec:
     - calculator.grid.demanddriventech.com
     secretName: calculator-tls
   rules:
-  - host: calculator.grid.demanddriventech.com
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
@@ -63,5 +62,6 @@ spec:
             name: calculator
             port:
               number: 80
+    host: calculator.grid.demanddriventech.com
 ---
 
