@@ -1,11 +1,12 @@
+import sys
+
 import grpc
 import calculator_pb2
 import calculator_pb2_grpc
 
-
-channel = grpc.secure_channel(
-    "calc2.grid.demanddriventech.com:443", grpc.ssl_channel_credentials()
-)
+host = sys.argv[1]
+port = sys.argv[2]
+channel = grpc.secure_channel(f"{host}:{port}", grpc.ssl_channel_credentials())
 
 req = calculator_pb2.CalculateRequest(x=17, y=25, op="+")
 client = calculator_pb2_grpc.CalculatorStub(channel)
